@@ -106,7 +106,6 @@ let price = isStudent ? '8,000원' : '20,000원';
 
 console.log(price);
 
-
 // ch2. Arrow function 
 //
 // 화살표 함수는 익명으로 작성해야한다.
@@ -120,3 +119,29 @@ foo();
 // 암묵적 리턴
 
 const fooImplicitReturn = () => { console.log('foo') ; }
+
+
+// ch3. The Spread & rest Operator
+
+// Spread 연산자를 통해서 배열, 문자열, 객체등의 요소를 분해해서 개별 요소로 가져올 수 있다.
+// 리액트에서는 불변성을 지키는 목적으로 배열 복사를 할때 많이 사용한다.
+const zoo = ['cat' , 'dog', 'elephant', 'lion']
+
+const addAnimal = (zoo, animal) => {
+	let zooArr = [...zoo, animal];
+
+	return zooArr;
+}
+
+addAnimal(zoo, 'eagle');
+
+const arr = ['a', 'b', 'c']
+console.log(arr);
+
+console.log(...arr);
+
+const arr2 = [1,2,3]
+const arr3 = [...arr, ...arr2]
+
+console.log(arr3)
+
