@@ -9,7 +9,7 @@ ch1. basic language (iterator, conditional statements)
 ch2. Arrow function  
 ch3. The Spread & rest Operator
 ch4. Objects and Object Destructuring
-ch5. Array functions (map, filter, reduce)
+ch5. Array functions (map, filter)
 
 */
 
@@ -145,3 +145,94 @@ const arr3 = [...arr, ...arr2]
 
 console.log(arr3)
 
+// 객체 spread
+
+const obj1 = { a: 1, b:2}
+const obj2 = {c:3}
+
+const obj3 = {...obj1, ...obj2}
+
+// rest operator
+
+// 나머지 arguments 들을 배열로 묶어주는 파라미터 역할을 한다.
+
+const add = (a, b, ...rest) => {
+	console.log(a)
+	console.log(b)
+	console.log(rest)
+}
+
+add(5,3,4,4,4,4,5)
+
+
+// ch4. Objects and Object Destructuring
+
+
+// 파이썬 딕셔너리랑 사용법은 일치
+
+const js_obj = {
+	key : 'value'
+}
+
+// destructuring은 변수의 depth 가 너무 깊어질때 많이 활용
+const abc = {
+	a : 1, 
+	b : 2, 
+	c : 3
+}
+
+const {a,b,c} = abc;
+
+console.log(a, b, c)
+
+// ch5. Array Functions(map, filter)
+//
+// forEach와 map 의 차이는 return 이다 !
+
+const animals = ['lion', 'eagle']
+
+animals.forEach(animal => {
+	console.log(animal)
+})
+
+// map 의 목적은 매핑이다, 포인트는 새로운 배열을 리턴한다는 점! 목적을 생각해두고 사용하자
+
+const cuteAnimals = animals.map((animal) => {
+	return 'cute' + animal
+})
+
+// reduce 초기값 없이
+result = oneTwoThree.reduce((acc, cur, i) => {
+  console.log(acc, cur, i);
+  return acc + cur;
+}, 0);
+// 0 1 0
+// 1 2 1
+// 3 3 2
+result; // 6
+
+// reduce 초기값 있
+result = oneTwoThree.reduce((acc, cur, i) => {
+  console.log(acc, cur, i);
+  return acc + cur;
+});
+// 1 2 1
+// 3 3 2
+result; // 6 
+
+// reduce 를 이용해서 모든 array function 이 구현 가능함
+// 자주 사용하는 array function -> map, filter, find, findIndex, includes, every 
+
+// reduce 를 이용해서 map 과 같은 기능 구현
+result = oneTwoThree.reduce((acc, cur) => {
+  acc.push(cur % 2 ? '홀수' : '짝수');
+  return acc;
+}, []);
+result; // ['홀수', '짝수', '홀수']
+
+// reduce 를 이용해서 filter와 같은 기능 구현
+result = oneTwoThree.reduce((acc, cur) => {
+  if (cur % 2) acc.push(cur);
+  return acc;
+}, []);
+result; // [1, 3]
