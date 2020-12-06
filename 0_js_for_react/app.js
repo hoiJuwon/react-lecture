@@ -201,7 +201,7 @@ const cuteAnimals = animals.map((animal) => {
 	return 'cute' + animal
 })
 
-// reduce 초기값 없이
+// reduce 초기값 설정하기
 result = oneTwoThree.reduce((acc, cur, i) => {
   console.log(acc, cur, i);
   return acc + cur;
@@ -211,7 +211,7 @@ result = oneTwoThree.reduce((acc, cur, i) => {
 // 3 3 2
 result; // 6
 
-// reduce 초기값 있
+// reduce 초기값 설정하지 않으면 자동으로 인덱스 0번째의 값을 초기값으로 설정한다
 result = oneTwoThree.reduce((acc, cur, i) => {
   console.log(acc, cur, i);
   return acc + cur;
