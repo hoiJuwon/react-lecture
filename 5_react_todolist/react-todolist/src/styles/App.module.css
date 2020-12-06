@@ -1,0 +1,23 @@
+.backg { 
+	width: 100%;
+	background-color: #DCE3EE;
+	height: 100vh;
+	
+	display: flex;
+	justify-content : center;
+	align-items : center;
+}
+
+
+.container {
+	display: flex;
+	justify-content : center;
+	align-items : center;
+	flex-direction: column;
+
+	width : 400px;
+	height: 800px;
+
+	background-color: white;
+	box-shadow: 15px 15px 30px 0 rgba(0, 0, 0, 0.2);
+}

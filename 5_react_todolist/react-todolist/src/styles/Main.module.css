@@ -1,0 +1,23 @@
+.wrapper {
+	height: 800px;
+	width: 75%;
+	margin-top: 50px;
+}
+
+.deleteBtn {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	color : #1E4889;
+}
+
+.item_wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-top : 20px;
+	padding-left: 3px;
+}

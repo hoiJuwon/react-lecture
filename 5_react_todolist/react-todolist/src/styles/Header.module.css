@@ -1,0 +1,51 @@
+.wrapper { 
+	display:flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	
+	width: 75%;
+	height: 100px;	
+	margin-top: 40px;
+}
+
+.today_wrapper {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	width: 130px;
+	text-align: left;
+	line-height : 170%;
+}
+
+.day {
+	font-weight: 800;
+	font-size: 35px;
+	color: #1E4889;
+}
+.month_date_wrapper {
+	display:flex;
+	justify-content: center;
+	align-items: flex-end;
+
+	font-size : 20px;
+	font-weight: 400;
+	color: #1E4889;
+
+	opacity: 0.7;
+	text-align: left;
+}
+.month {
+	margin-right: 3px;
+	font-weight: 800;
+}
+
+.time {
+	font-size: 20px;
+	font-weight: 800;
+	border : 1px solid #1E4889;
+	border-radius: 15px;
+	padding: 2px 15px;
+	
+	color: #1E4889;
+}
