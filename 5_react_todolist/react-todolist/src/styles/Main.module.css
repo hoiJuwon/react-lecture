@@ -1,7 +1,7 @@
 .wrapper {
 	height: 800px;
 	width: 75%;
-	margin-top: 50px;
+	margin-top: 20px;
 }
 
 .deleteBtn {
@@ -11,13 +11,6 @@
 	align-items: center;
 
 	color : #1E4889;
+	font-size : 14px;
 }
 
-.item_wrapper {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-
-	margin-top : 20px;
-	padding-left: 3px;
-}

@@ -1,0 +1,25 @@
+
+.item_wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-top : 20px;
+	padding-left: 3px;
+}
+
+.content {
+	font-size : 18px;
+	opacity: 0.8;
+}
+
+.content_done {
+	font-size : 18px;
+	opacity: 0.4;
+	-webkit-text-decoration-line: line-through; /* Safari */
+	text-decoration-line: line-through;
+}
+
+.checkBtn {
+	color: #1E4889;
+}

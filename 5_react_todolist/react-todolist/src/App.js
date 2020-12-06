@@ -15,8 +15,13 @@ function App() {
 
 	const onToggle = (id) => {
 		let itemslist = items;
+		let targetItem = itemslist[id];
 
-		itemslist[id].state = 'DONE';
+		if (targetItem.state === 'DONE') {
+			itemslist[id].state = 'TODO';
+		} else if (targetItem.state === 'TODO') {
+			itemslist[id].state = 'DONE';
+		}
 
 		setItems(itemslist);
 		console.log(itemslist)
@@ -65,6 +70,7 @@ function App() {
 		<div className={styles.backg}>
 		  <div className={styles.container}>
 			  <Header className={styles.head}/>
+			  <div className={styles.dashedline}></div>
 			  <Main className={styles.main} items={items} onToggle={onToggle} onDelete={onDelete} />
 			  <Footer className={styles.foot} onCreate={onCreate} createInput={createInput} onChange={onChange}/>
 		  </div>

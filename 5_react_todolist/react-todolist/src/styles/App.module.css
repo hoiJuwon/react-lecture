@@ -21,3 +21,10 @@
 	background-color: white;
 	box-shadow: 15px 15px 30px 0 rgba(0, 0, 0, 0.2);
 }
+
+.dashedline {
+	margin-top: 45px;
+	width: 400px;
+	border-top: 0.2px dashed #1E4889;
+	opacity: 0.5;
+}
