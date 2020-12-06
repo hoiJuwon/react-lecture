@@ -6,7 +6,7 @@ function Main({items, onToggle, onDelete}) {
 	const [isDeleteMode, setIsDeleteMode] = useState(false);
 
 	const onToggleDeleteMode = () => {
-		setIsDeleteMode(true);
+		setIsDeleteMode(!isDeleteMode);
 	}
 
 

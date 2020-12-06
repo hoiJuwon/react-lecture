@@ -22,4 +22,10 @@
 
 .checkBtn {
 	color: #1E4889;
+	font-size: 22px;
+}
+
+.checkBtnAi {
+	color: #1E4889;
+	font-size : 24px;
 }

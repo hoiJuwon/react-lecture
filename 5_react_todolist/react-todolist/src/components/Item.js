@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import styles from '../styles/Item.module.css';
-import {BsCircle, BsCircleFill, BsTrash} from 'react-icons/bs';
+import {BsCircle, BsTrash} from 'react-icons/bs';
+import {AiFillCheckCircle} from 'react-icons/ai';
 
 function Item({item, onDelete, onToggle, isDeleteMode}) {
 
@@ -11,7 +12,6 @@ function Item({item, onDelete, onToggle, isDeleteMode}) {
 	}
 
 	useEffect(() =>{
-		console.log('ffjdsalkfjsdlk')
 		if (item.state === 'DONE') {
 			setIsDone(true) ;
 		}
@@ -36,7 +36,7 @@ function Item({item, onDelete, onToggle, isDeleteMode}) {
 					<>
 						{isDone ?
 							<>
-								<BsCircleFill className={styles.checkBtn} onClick={() => {
+								<AiFillCheckCircle className={styles.checkBtnAi} onClick={() => {
 									onToggle(item.id);
 									onToggleIsDone();
 								}} />

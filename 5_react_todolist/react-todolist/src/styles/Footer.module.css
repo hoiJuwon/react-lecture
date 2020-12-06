@@ -1,3 +1,29 @@
 .wrapper {
 	height: 100px;
+	display : flex;
+	justify-content : space-between;
+	align-items : center;
+	width: 75%;
+
+	margin-bottom : 30px;
+}
+
+.create_input {
+	border : 0;	
+	outline : 0;
+	background : transparent;
+	border-bottom : 1px solid #1E4889;
+	padding: 10px;
+
+	font-size: 18px;
+	color: rgba(0,0,0,0.7);
+}
+
+.create_input::placeholder {
+	opacity: 0.4;
+}
+
+.add_btn {
+	font-size: 50px;
+	color : #1E4889;
 }
