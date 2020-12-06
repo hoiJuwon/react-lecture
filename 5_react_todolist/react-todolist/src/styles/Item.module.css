@@ -20,6 +20,27 @@
 	text-decoration-line: line-through;
 }
 
+.content_wrapper {
+	display: flex;
+	justify-content : center;	
+	align-items : center;
+}
+
+.item_id {
+	margin-right: 8px;
+	color: white;
+	background-color: #1E4889;
+	border-radius: 50%;
+	text-align : center;
+
+	width: 19px;
+	height: 19px;
+
+	font-size: 12px;
+	font-weight: 800;
+	padding-top: 1px;
+}
+
 .checkBtn {
 	color: #1E4889;
 	font-size: 22px;

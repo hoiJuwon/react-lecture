@@ -22,11 +22,13 @@ function Item({item, onDelete, onToggle, isDeleteMode}) {
 	return (
 			<div className={styles.item_wrapper} >
 				{isDone ?
-					<>
+					<div className={styles.content_wrapper}>
+						<div className={styles.item_id}>{item.id}</div>
 						<div className={styles.content_done}>{item.content}</div>
-					</> : <>
+					</div> : <div className={styles.content_wrapper}>
+						<div className={styles.item_id}>{item.id}</div>
 						<div className={styles.content} >{item.content}</div>
-					</>
+					</div>
 				}
 				{isDeleteMode ? 
 					<>

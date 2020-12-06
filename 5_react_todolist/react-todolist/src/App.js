@@ -7,7 +7,7 @@ function App() {
 	const [items, setItems] = useState([
 		{
 			id : 0,
-			content : 'Example',
+			content : 'Test',
 			state : 'TODO'
 		}
 	]);
@@ -65,6 +65,12 @@ function App() {
 	const onChange = (e) => {
 		setCreateInput(e.target.value);
 	}
+
+	const onKeyPress = (e) => {
+		if (e.key === 'Enter') {
+			onCreate();
+		}
+	}
 	
 	return (
 		<div className={styles.backg}>
@@ -72,7 +78,7 @@ function App() {
 			  <Header className={styles.head}/>
 			  <div className={styles.dashedline}></div>
 			  <Main className={styles.main} items={items} onToggle={onToggle} onDelete={onDelete} />
-			  <Footer className={styles.foot} onCreate={onCreate} createInput={createInput} onChange={onChange}/>
+			  <Footer className={styles.foot} onCreate={onCreate} createInput={createInput} onChange={onChange} onKeyPress={onKeyPress}/>
 		  </div>
 		</div>
 	 );

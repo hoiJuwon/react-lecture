@@ -16,6 +16,11 @@ function Main({items, onToggle, onDelete}) {
 
 			<div className={styles.todolist_wrapper}>
 				{items && items.map((item) => {
+					if (item.content === 'Test' ) {
+						return(
+							<></>
+						)
+					}
 					return(
 						<Item item={item} onToggle={onToggle} onDelete={onDelete} isDeleteMode={isDeleteMode} />
 					);
