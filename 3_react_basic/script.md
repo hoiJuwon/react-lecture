@@ -29,7 +29,7 @@
 
 - return <div>App.js</div> -> React.createElement('div', null, 'App.js') ;
 - 조금만 더 자세히 설명하자면, jsx로 짜진 구조는 React.createElement 를 재귀 호출하면서 실제 구조를 만든다.
-- createElement 함수를 통해서 jsx 구조가 자바스크립트 object 형태로 변환되고, 이를 render 함수를 통해서 화면에 그린다고 생각하면 된다.
+- babel 을 통해서 jsx가 자바스크립트로 변환되고, createElement 함수를 통해서 jsx 구조가 실제 tag로 변환되고, 이를 render 함수를 통해서 화면에 그린다고 생각하면 된다.
 
 ## jsx 기본 문법 규칙들
 - 상단에는 하나의 태그로 꼭 감싸줘야한다. (Fragment 사용 가능 <></>)
